@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:customer",
+ "creation": "2025-06-10 15:43:13.625579",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "email",
+  "amended_from",
+  "vehicle_number",
+  "issues",
+  "material_needed",
+  "profit_percent",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Material Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "material_needed",
+   "fieldtype": "Link",
+   "label": "Material needed",
+   "options": "Materials"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "profit_percent",
+   "fieldtype": "Int",
+   "label": "Profit Percent"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "pending\naccept\nreject\nrevise"
+  },
+  {
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "issues",
+   "fieldtype": "Data",
+   "label": "Issues",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-26 17:11:42.003883",
+ "modified_by": "Administrator",
+ "module": "Cars",
+ "name": "Material Request",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
