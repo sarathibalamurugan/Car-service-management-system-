@@ -15,8 +15,9 @@ def handle_material_request_response(request, action):
 
 
                 invoice = frappe.new_doc("Material Invoice")
-                mat=frappe.get_doc("Materials", invoice.material_needed)
+                mat=frappe.get_doc("Materials", doc.material_needed)
                 mat.db_set("stock_qty",mat.stock_qty - 1)
+                
                 frappe.sendmail(
                     recipients=[doc.email],
                     subject=f"{doc.customer} - Document PDF",
